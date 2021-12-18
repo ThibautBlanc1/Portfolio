@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 
-body{ 
+body{
 	display: flex;
 	justify-content: center;
 	/*background: rgb(224,224,224);
@@ -15,6 +15,11 @@ body{
 
 img{
 	cursor: pointer;
+	margin-top: 5%;
+}
+
+.sup{
+	vertical-align: text-top;
 }
 
 #lightbox {
@@ -172,19 +177,32 @@ img{
 
 .fleche{
 	position: absolute;
-	font-size: 150px;
+	font-size: 15vh;
 	-webkit-text-stroke: 1px black;
 	color: transparent;
 	top: 80%;
+}
+
+.fleche a{
+	text-decoration: none;
+	color: transparent;
 }
 
 .fleche a:hover{
 	color: black;
 }
 
-.fleche a{
-	text-decoration: none;
-	color: transparent;
+.fleche a:hover ~ .mes_projets{
+	display: block;
+}
+
+.mes_projets{
+	position: absolute;
+	top: 0px;
+	font-size: 20px;
+	color: black;
+	display: none;
+	margin-left: 20%;
 }
 
 .fleche2{
@@ -204,6 +222,8 @@ img{
 	color: transparent;
 }
 
+/* pagePortfolio */
+
 .allProjet{
 	margin: 0px;
 	padding: 0px;
@@ -215,7 +235,7 @@ img{
 .Projet{
 	text-transform: uppercase;
 	/*font-size: 160px;*/
-	font-size: 10vw;
+	font-size: 9vw;
 	font-family: 'Rakkas', 'Roboto',sans-serif;
 	-webkit-text-stroke: 1px black;
 	color: transparent;
@@ -239,100 +259,13 @@ img{
 	display: none;
 	margin-top: 5vh;
 	margin-bottom: 5vh;
-}
-
-#d1:hover .Projet{
-	color: black;
-}
-
-#d2:hover .Projet{
-	color: black;
-}
-
-#d3:hover .Projet{
-	color: black;
-}
-
-#d4:hover .Projet{
-	color: black;
-}
-
-#d5:hover .Projet{
-	color: black;
-}
-
-#d6:hover .Projet{
-	color: black;
-}
-
-#d7:hover .Projet{
-	color: black;
-}
-
-#d8:hover .Projet{
-	color: black;
-}
-
-#D1{
-	display: none;
 	flex-wrap: nowrap;
 	text-align: center;
 	justify-content: center;
 }
 
-#D2{
-	display: none;
-	flex-wrap: nowrap;
-	text-align: center;
-	justify-content: center;
-}
-
-#D3{
-	display: none;
-	flex-wrap: nowrap;
-	text-align: center;
-	justify-content: center;
-}
-
-#D4{
-	display: none;
-	flex-wrap: nowrap;
-	text-align: center;
-	justify-content: center;
-}
-
-#D5{
-	display: none;
-	flex-wrap: nowrap;
-	text-align: center;
-	justify-content: center;
-}
-
-#D6{
-	display: none;
-	flex-wrap: nowrap;
-	text-align: center;
-	justify-content: center;
-}
-
-#D7{
-	display: none;
-	text-align: center;
-	justify-content: center;
-}
-
-#D8{
-	display: none;
-	flex-wrap: nowrap;
-	text-align: center;
-	justify-content: center;
-}
-
-#D9{
-	display: none;
-	flex-wrap: nowrap;
-	text-align: center;
-	justify-content: center;
+.blocProjet:hover .Projet{
+	color: black;
 }
 
 .colonne1{
@@ -343,6 +276,35 @@ img{
 	margin-right: 15px;
 	margin-left: 15px;
 	margin-top: 30px;
+}
+
+.img1{
+	position: absolute;
+	left: 0px;
+	z-index: 1;
+}
+
+.img2{
+	padding-top: 125px;
+	position: absolute;
+	left: 100px;
+}
+
+.img3{
+	padding-left: 40%;
+	padding-top: 10%;
+	position: absolute;
+}
+
+.img4{
+	padding-top: 300px;
+}
+
+.img5{
+	position: absolute;
+	padding-top: 325px;
+	padding-left: -500px;
+	left: 0px;
 }
 
 .range{
@@ -405,17 +367,18 @@ p{
 	margin-bottom: 15px;
 }
 
-.lien {
-	
-	font-style: italic;
-}
-.lien a{
-	text-decoration: none;
-	color: #000000;
-	font-weight: bold;
+iframe{
+	margin-top: 5%;
 }
 
-.lien a:hover{
-	text-decoration: underline;
-	color: #000000;
+.affiche{
+	margin-top: 10%;
+}
+
+.atelier_txt{
+	width: 50%;
+}
+
+.description{
+	column-count: 2;
 }
