@@ -6,14 +6,9 @@
 body{
 	display: flex;
 	justify-content: center;
-	/*background: rgb(224,224,224);
-	background: linear-gradient(90deg, rgba(224,224,224,0.7539390756302521) 0%, rgba(218,218,218,1) 100%);
-	background-image: url(images/noiseGradient2.png);
-	background-image: url(images/Circle02.png);
-	background-repeat: no-repeat;*/
 }
 
-img{
+.imgProjet{
 	cursor: pointer;
 	margin-top: 5%;
 }
@@ -232,6 +227,11 @@ img{
 	text-align: center;
 	position: absolute;
 }
+
+.blocProjet{
+	display: block;
+}
+
 .Projet{
 	text-transform: uppercase;
 	/*font-size: 160px;*/
@@ -257,25 +257,33 @@ img{
 
 .hide{
 	display: none;
-	margin-top: 5vh;
+	margin-top: 2vh;
 	margin-bottom: 5vh;
-	flex-wrap: nowrap;
+	/*flex-wrap: nowrap;
 	text-align: center;
-	justify-content: center;
+	justify-content: center;*/
+}
+
+.imageOuverture{
+	/*border-style: solid;*/
+	padding-top: 0px;
 }
 
 .blocProjet:hover .Projet{
 	color: black;
 }
 
+.blocColonnes{
+	display: flex;
+	justify-content: center;
+}
+
 .colonne1{
 	position: relative;
 	width: 30%;
 	/*width: 500px*/
-	text-align: center;
 	margin-right: 15px;
 	margin-left: 15px;
-	margin-top: 30px;
 }
 
 .img1{
@@ -327,7 +335,8 @@ img{
 }
 
 .ici:hover{
-	background-color: white;
+	background-color: black;
+	color: white;
 }
 
 h1{
@@ -367,12 +376,8 @@ p{
 	margin-bottom: 15px;
 }
 
-iframe{
+.video{
 	margin-top: 5%;
-}
-
-.affiche{
-	margin-top: 10%;
 }
 
 .atelier_txt{
@@ -380,5 +385,16 @@ iframe{
 }
 
 .description{
-	column-count: 2;
+	width: 50%;
+	/*column-count: 2;*/
+}
+
+.blocImages{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.lienStayhome{
+	color: black;
 }
