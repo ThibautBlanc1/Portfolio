@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<style type="text/css" ></style>
+	<title>Portfolio</title>
+
+</head>
+<body>
+
+
+
+	<div class="header">
+		<div class="blocFiltres">
+			<div class="filtre"><a href="Index.html">Accueil</a></div>
+			<div class="filtre"><a href="Animation.html">Animation</a></div>
+			<div class="filtre"><a href="Edition.html">Edition</a></div>
+			<div class="filtre"><a href="Numérique.html">Numérique</a></div>
+			<div class="filtre"><a href="Typographie.html">Typographie</a></div>
+		</div>
+	</div>
+
+	<div class="allProjet">
+
+<!-- PROJET 8 -->
+			<div class="blocProjet">
+				<div class="Projet">Canailles</div>
+				<div class="hide">
+					<div class="imageOuverture">
+						<img src="images/canailles/prise_de_vue3.png" alt="" width="100%">
+					</div>
+				<div class="blocColonnes">
+							<div class="colonne1">
+									<img class="imgProjet" src="images/canailles/mangue1.jpg" width="49%">
+									<img class="imgProjet" src="images/canailles/safran1.jpg" width="49%">
+								<img src="images/canailles/poivre1.jpg" width="49%">
+								<img src="images/canailles/figue 1.jpg" width="49%">
+							</div>
+							<div class="colonne2">
+									<h1>Identitée visuelle _<br />2e année BTS Design Graphique</h1>
+									<p class="description">Recherche d'image de marque pour la nouvelle gamme de tartinade des "fins gourmets". </p>
+									<h4>Format : Édition / Packaging <br />
+									Outils : Illustrator / Photoshop / InDesign<br />
+								  Travail de groupe</h4>
+									<img class="imgProjet" src="images/canailles/logo_canailles.png" width="50%">
+						</div>
+					</div>
+					</div>
+			</div>
+
+</div>
+
+<footer>
+	<div class="footer">
+		<div>
+			<div class="info_footer">Portfolio _</div>
+			<div class="info_footer">Thibaut Blanc © </div>
+		</div>
+
+		<div class="info_footer_droite">
+			<div class="info_footer">+33 6 08 52 39 85</div>
+			<div class="info_footer">blanc.thibaut.43@gmail.com </div>
+		</div>
+
+
+	</div>
+</footer>
+
+			<!--script pour dérouler les projets-->
+			<script type="text/javascript">
+
+			// on stocke dans la variable "titresProjet" tous les éléments qui ont la classe "Projet".
+			// cette variable renvoie un tableau
+			var titresProjet = document.getElementsByClassName("Projet");
+
+			// déclaration de la variable pour mettre en mémoire un projet ouvert
+			var projetOpen;
+
+			// Boucle for, pour passer en revue tous les éléments titresProjet
+			// (la variable i passe de 0 à la longueur du tableau)
+			for(i=0; i<titresProjet.length; i++){
+
+			// autre manière de lancer une fonction au click
+			// titresProjet[i], i est l'index du tableau
+			titresProjet[i].onclick = function(){
+
+				// en 3 lignes on cible l'élément à ouvrir depuis l'élément parent
+				conteneur = this.parentElement; // this est l'élément cliqué
+				projets = conteneur.getElementsByClassName("hide"); // renvoie un tableau
+				projet = projets[0]; // notre projet à ouvrir est le premier élément du tablau, d'où [0]
+
+				// ouverture/fermeture en CSS directement dans l'élément (plus conventionnel que de passer par getComputedStyle)
+				if(projet.style.display == "block"){
+					projet.style.display = "none";
+				}else{
+					projet.style.display = "block";
+				}
+
+				// Fermeture d'un autre projet Ouvert
+				// si projetOpen est différent de projet, et s'il n'est pas indéfini.
+				//if(projetOpen != projet && projetOpen != undefined){
+					// projetOpen.style.display = "none";
+				// }
+				// mise en mémoire du projet ouvert
+				// projetOpen = projet;
+
+			}
+			}
+			</script>
+
+		<!--script pour lightbox-->
+		<script type="text/javascript">
+				const lightbox = document.createElement('div')
+				lightbox.id = 'lightbox'
+				document.body.appendChild(lightbox)
+
+				const images = document.querySelectorAll('img')
+				images.forEach(image => {
+				image.addEventListener('click', e => {
+					lightbox.classList.add('active')
+					const img = document.createElement('img')
+					img.src = image.src
+					while (lightbox.firstChild) {
+					lightbox.removeChild(lightbox.firstChild)
+					}
+					lightbox.appendChild(img)
+				})
+				})
+
+				lightbox.addEventListener('click', e => {
+				if (e.target !== e.currentTarget) return
+				lightbox.classList.remove('active')
+				})
+			</script>
+
+</body>
+</html>
