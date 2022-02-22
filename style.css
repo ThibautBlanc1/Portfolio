@@ -408,6 +408,16 @@ p{
 	justify-content: space-between;
 }
 
+.interieurBoite{
+	display: flex;
+	justify-content: space-around;
+}
+
+.livret{
+	width: 45%;
+	margin-top: 5%;
+}
+
 .lienStayhome{
 	color: black;
 }
